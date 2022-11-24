@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BackendService } from '../services/backend.service';
 
 @Component({
   selector: 'app-input-form',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class InputFormComponent implements OnInit {
    
 
-  constructor() { 
+  constructor(private backendService:BackendService) { 
     
   }
   
@@ -16,9 +17,13 @@ export class InputFormComponent implements OnInit {
   }
 
   inputTweet : string = "";
+  prediction : any;
   onTweetSubmit() {
-    //console.log(tweetForm.form)
     console.log(this.inputTweet);
+    this.backendService.postTweet(this.inputTweet).subscribe(data => {
+      console.log("Server response",data);
+      this.prediction = data;
+    })
   }
 
 }
