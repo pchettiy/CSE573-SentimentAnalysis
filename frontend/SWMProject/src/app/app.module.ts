@@ -6,11 +6,19 @@ import { AppComponent } from './app.component';
 import { InputFormComponent } from './input-form/input-form.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BlackPantherComponent } from './black-panther/black-panther.component';
+import { HomeComponent } from './home/home.component';
+import { BlackAdamComponent } from './black-adam/black-adam.component';
+import { GlassOnionComponent } from './glass-onion/glass-onion.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputFormComponent
+    InputFormComponent,
+    BlackPantherComponent,
+    HomeComponent,
+    BlackAdamComponent,
+    GlassOnionComponent
   ],
   imports: [
     BrowserModule,

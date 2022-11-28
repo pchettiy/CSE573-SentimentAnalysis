@@ -1,0 +1,23 @@
+<h1>Black Panther : Wakanda Forever</h1>
+<pre></pre>
+<h3>Overall Sentiment : Positive</h3>
+<pre></pre>
+<div class="container mt-5">
+  
+    <h2>Tweets</h2>
+    <pre></pre>
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Tweet</th>
+            <th>Sentiment</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tweet of Tweets">
+          <td>{{ tweet.tweet }}</td>
+          <td>{{ tweet.sentiment }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
